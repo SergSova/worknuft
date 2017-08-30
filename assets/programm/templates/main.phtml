@@ -1,0 +1,406 @@
+[[$head?&classex=`index`]]
+
+<section id="main" class="section1"><!--1-->
+    <div class="section-wrap">
+        <div class="slider customPagin new">
+            [[!getImageList?
+            &docid=`[[*id]]`
+            &tvname=`migx-main-slider`
+            &tpl=`main-slider-item`
+            ]]
+        </div>
+        <div class="title">
+            <h1>[[*pagetitle]]</h1>
+        </div>
+        <div class="mouse-scroll">
+            <div class="mouse-wrapp">
+                <div class="mouse"></div>
+            </div>
+        </div>
+    </div>
+</section><!--1-->
+<section id="advantages" class="section2"><!--2-->
+    <h2>[[*title_2_baner]]</h2>
+    <div class="caterpillar">
+        [[!getImageList?
+        &docid=`[[*id]]`
+        &tvname=`migx-advantages`
+        &tpl=`advantages-item`
+        ]]
+    </div>
+</section><!--2-->
+<section id="numbers" class="section3 grey-section"><!--3-->
+    <div class="section-wrap">
+        <div class="vertical-lines">
+            <div class="vertical-wrap">
+                <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="numbers-slider sync-wave-slider">
+            [[!getImageList?
+            &docid=`[[*id]]`
+            &tvname=`migx-numbers`
+            &tpl=`numbs-item`
+            ]]
+        </div>
+        <div class="container">
+            <div class="wave-slider">
+                <div class="clouds">
+                    <span class="cloud active"></span>
+                    <span class="cloud"></span>
+                </div>
+                <div class="slider customPagin sync-wave-slider">
+                    [[!getImageList?
+                    &docid=`[[*id]]`
+                    &tvname=`migx-numbers`
+                    &tpl=`numbs-image`
+                    ]]
+                </div>
+                <div class="text-slider sync-wave-slider">
+                    [[!getImageList?
+                    &docid=`[[*id]]`
+                    &tvname=`migx-numbers`
+                    &tpl=`@CODE:
+                    <div class="slide">
+                        <div class="text">
+                            [[+title]]
+                        </div>
+                    </div>
+                    `
+                    ]]
+                </div>
+            </div>
+        </div>
+    </div>
+</section><!--3-->
+<section id="announcements" class="section4"><!--4-->
+    <div class="section-wrap">
+        <div class="container">
+            <div class="horizontal-lines-subtitle lines-subtitle">
+                <div class="h2">[[*title_4_announcements]]</div>
+                <div class="cutter">
+                    <div><span><i>[[*title_4_announcements]]</i></span>
+                    </div>
+                    <div><span><i>[[*title_4_announcements]]</i></span>
+                    </div>
+                </div>
+            </div>
+            <div class="announcements">
+                <h2>[[#[[%10:bid]].pagetitle]]</h2>
+                <div class="scroll">
+                    [[!pdoResources?
+                    &parents=`[[%10:bid]]`
+                    &sortby=`{"publishedon":"DESC"}`
+                    &includeContent=`1`
+                    &limit=`50`
+                    &tpl=`obyava-slider-item`
+                    &context=`[[*context_key]]`
+                    ]]
+                </div>
+                <a class="button" href="#">ВСІ ОГОЛОШЕННЯ</a>
+            </div>
+            <div class="events">
+                <h2>[[#[[%9:bid]].pagetitle]]</h2>
+                <div class="scroll">
+                    <div class="scroll-inner">
+                        [[!pdoResources?
+                        &parents=`[[%9:bid]]`
+                        &sortby=`{"publishedon":"DESC"}`
+                        &includeContent=`1`
+                        &limit=`50`
+                        &tpl=`anons-slider-item`
+                        &context=`[[*context_key]]`
+                        ]]
+                    </div>
+                </div>
+                <a class="button" href="#">Всі АНОНСИ</a>
+            </div>
+        </div>
+    </div>
+</section><!--4-->
+<section id="baner" class="section5 grey-section"><!--5-->
+    <div class="section-wrap">
+        <div class="container">
+            <div class="banner">
+                <img src="[[*image_5_baner]]" alt="[[*title_5_baner]]">
+                <div class="banner-text">[[*title_5_baner]]</div>
+                <a href="#" class="button">Вступна компанія</a>
+            </div>
+        </div>
+    </div>
+</section><!--5-->
+<section id="gallery" class="section6"><!--6-->
+    <div class="section-wrap">
+        <div class="vertical-lines">
+            <div class="vertical-wrap">
+                <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="vertical-wrap">
+            <div class="vertical-lines-subtitle lines-subtitle">
+                <div class="h2">[[#[[%11:bid]].pagetitle]]</div>
+                <div class="cutter">
+                    <div><span><i>[[#[[%11:bid]].pagetitle]]</i></span></div>
+                    <div><span><i>[[#[[%11:bid]].pagetitle]]</i></span></div>
+                    <div><span><i>[[#[[%11:bid]].pagetitle]]</i></span></div>
+                    <div><span><i>[[#[[%11:bid]].pagetitle]]</i></span></div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="sec-head">
+                <h2>[[*title_6_gallery]]</h2>
+                <nav class="fall-down">
+                    <span>КАТЕГОРІЯ</span>
+                    <ul>
+                        [[!pdoResources?
+                        &parents=`[[%11:bid]]`
+                        &depth=`0`
+                        &sortby=`{"menuindex":"ASC"}`
+                        &tpl=`@INLINE
+                        <li><a href="[[~[[*id]]]]#photo_cat=[[+id]]"></a>[[+pagetitle]]
+                        </li>
+                        `
+                        ]]
+                    </ul>
+                </nav>
+                <a class="button" href="#">Фотогалерея</a>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <div class="photo-gallery">
+                <div class="slider customPagin chocolate-slider">
+                    [[!pdoResources?
+                    &parents=`[[%11:bid]]`
+                    [[#get.photo_cat:!empty=`&resources=`[[#get.photo_cat]]``]]
+                    &sortby=`{"publishedon":"DESC"}`
+                    &limit=`0`
+                    &includeTVs=`migx-albums`
+                    &tvPrefix=``
+                    &where=`{"template:=":4}`
+                    &tpl=`catalog-item`
+                    &showLog=`0`
+                    ]]
+                </div>
+                <div class="chocolate-popup">
+                    <div class="close"><span></span><span></span></div>
+                    <div class="silks">
+                        <div class="silk1"></div>
+                        <div class="silk2"></div>
+                    </div>
+                    <div class="chocolate-popup-slider"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section><!--6-->
+<section id="events" class="section7"><!--7-->
+    <div class="section-wrap">
+        <div class="vertical-lines">
+            <div class="vertical-wrap">
+                <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="vertical-wrap">
+            <div class="vertical-lines-subtitle lines-subtitle">
+                <div class="h2">[[#[[%8:bid]].pagetitle]]</div>
+                <div class="cutter">
+                    <div><span><i>[[#[[%8:bid]].pagetitle]]</i></span></div>
+                    <div><span><i>[[#[[%8:bid]].pagetitle]]</i></span></div>
+                    <div><span><i>[[#[[%8:bid]].pagetitle]]</i></span></div>
+                    <div><span><i>[[#[[%8:bid]].pagetitle]]</i></span></div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <h2>[[*title_7_events]]</h2>
+            <div class="news-section">
+                <div class="important-news">
+                    <div class="slider customPagin not-fade-slider">
+                        [[!pdoResources?
+                        &parents=`[[%8:bid]]`
+                        &sortby=`{"publishedon":"DESC"}`
+                        &limit=`4`
+                        &includeContent=`1`
+                        &includeTVs=`img_main,img-infografics,isMainEvent`
+                        &where=`{"isMainEvent:=":1,"template:=":5}`
+                        &tvPrefix=``
+                        &tpl=`events-slider-important-item`
+                        ]]
+                    </div>
+                </div>
+                <div class="news">
+                    <div class="scroll">
+                        [[!pdoResources?
+                        &parents=`[[%8:bid]]`
+                        &resources=`[[+skip]]`
+                        &sortby=`{"publishedon":"DESC"}`
+                        &limit=`11`
+                        &includeContent=`1`
+                        &includeTVs=`img_main,img-infografics`
+                        &where=`{"template:=":5}`
+                        &tvPrefix=``
+                        &tpl=`events-slider-item`
+                        ]]
+                    </div>
+                </div>
+                <div class="news-icon">
+                    <div><span></span></div>
+                    <div><span></span></div>
+                </div>
+                <a href="#" class="button">Всі НОВИНИ</a>
+            </div>
+        </div>
+    </div>
+</section><!--7-->
+<section id="videogallery" class="section8 grey-section"><!--8-->
+    <div class="section-wrap">
+        <div class="container">
+            <div class="sec-head">
+                <div class="horizontal-lines-subtitle lines-subtitle">
+                    <div class="h2">[[#[[%21:bid]].pagetitle]]</div>
+                    <div class="cutter">
+                        <div><span><i>[[#[[%21:bid]].pagetitle]]</i></span>
+                        </div>
+                        <div><span><i>[[#[[%21:bid]].pagetitle]]</i></span>
+                        </div>
+                    </div>
+                </div>
+                <h2>[[*videogallery-title]]</h2>
+                <nav class="fall-down">
+                    <span>КАТЕГОРІЯ</span>
+                    <ul>
+                        [[!pdoResources?
+                        &parents=`[[%21:bid]]`
+                        &depth=`0`
+                        &sortby=`{"menuindex":"ASC"}`
+                        &tpl=`@INLINE
+                        <li><a href="[[~[[*id]]]]?video_cat=[[+id]]">[[+pagetitle]]</a>
+                        </li>
+                        `
+                        ]]
+                    </ul>
+                </nav>
+                <a class="button" href="#">ВІДЕОАРХІВ</a>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <div class="video-gallery">
+                <div class="slider customPagin chocolate-slider">
+                    [[pdoResources?
+                    &parents=`[[#get.video_cat:default=`[[%21:bid]]`]]`
+                    &sortby=`{"publishedon":"DESC"}`
+                    &limit=`0`
+                    &includeTVs=`poster-video,video-link`
+                    &includeContent=`1`
+                    &tvPrefix=``
+                    &where=`{"template:=":6}`
+                    &tpl=`video-catalog-item`
+                    &showLog=`0`
+                    ]]
+                </div>
+            </div>
+        </div>
+    </div>
+</section><!--8-->
+<section id="history-graduates" class="section9"><!--9-->
+    <div class="section-wrap">
+        <div class="vertical-lines">
+            <div class="vertical-wrap">
+                <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="vertical-wrap">
+            <div class="vertical-lines-subtitle lines-subtitle">
+                <div class="h2">[[*title_section_9]]</div>
+                <div class="cutter">
+                    <div><span><i>[[*title_section_9]]</i></span></div>
+                    <div><span><i>[[*title_section_9]]</i></span></div>
+                    <div><span><i>[[*title_section_9]]</i></span></div>
+                    <div><span><i>[[*title_section_9]]</i></span></div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <h2>[[*history-graduates-title]]</h2>
+            <div class="wrapper-slider-rewievs">
+                <div class="slides-wrap">
+                    [[!getImageList?
+                    &docid=`[[*id]]`
+                    &tvname=`migx-graduates`
+                    &tpl=`history-graduates-images`
+                    ]]
+                </div>
+                <div class="slider customPagin reviewsSlider">
+                    [[!getImageList?
+                    &docid=`[[*id]]`
+                    &tvname=`migx-graduates`
+                    &tpl=`history-graduates-item`
+                    ]]
+                </div>
+            </div>
+        </div>
+    </div>
+</section><!--9-->
+<section id="work-graduates" class="section10 work grey-section"><!--10-->
+    <div class="section-wrap">
+        <div class="vertical-wrap">
+            <div class="vertical-lines-subtitle lines-subtitle">
+                <div class="h2">[[*title_section_10]]</div>
+                <div class="cutter">
+                    <div><span><i>[[*title_section_10]]</i></span></div>
+                    <div><span><i>[[*title_section_10]]</i></span></div>
+                    <div><span><i>[[*title_section_10]]</i></span></div>
+                    <div><span><i>[[*title_section_10]]</i></span></div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <h2 class="work-head">[[*work-graduates-title]]</h2>
+        </div>
+        <div class="work-links">
+            [[!getImageList?
+            &docid=`[[*id]]`
+            &tvname=`migx-graduates-works`
+            &tpl=`work-graduates-item`
+            ]]
+        </div>
+    </div>
+</section><!--10-->
+<section class="section11 interesting">
+    <div class="section-wrap">
+        <div class="vertical-lines">
+            <div class="vertical-wrap">
+                <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="vertical-wrap">
+            <div class="vertical-lines-subtitle lines-subtitle">
+                <div class="h2">[[*title_section_11]]</div>
+                <div class="cutter">
+                    <div><span><i>[[*title_section_11]]</i></span></div>
+                    <div><span><i>[[*title_section_11]]</i></span></div>
+                    <div><span><i>[[*title_section_11]]</i></span></div>
+                    <div><span><i>[[*title_section_11]]</i></span></div>
+                </div>
+            </div>
+        </div>
+        <div class="interest-wrap">
+            <h2 class="interest-head">[[*interest-title]]</h2>
+            <div class="wrap-interest-list">
+                [[!getImageList?
+                &docid=`[[*id]]`
+                &tvname=`migx-interest-slider`
+                &tpl=`@CODE:
+                <div class="interest-item">
+                    <img src="[[+image]]" alt="[[+text]]">
+                    <div class="interest-text">[[+text]]</div>
+                </div>
+                `
+                ]]
+            </div>
+        </div>
+    </div>
+</section>
+
+[[$foot]]

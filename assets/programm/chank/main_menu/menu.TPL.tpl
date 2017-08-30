@@ -1,0 +1,1 @@
+<li [[+classes]]><a href="[[+link]]"><span>[[+menutitle:strip_tags:ucase]]</span></a>[[+wrapper]]</li>

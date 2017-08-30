@@ -1,0 +1,328 @@
+.all-wrapper[data-left="0"] .section-wrap {
+    transform: translateX(0);
+}
+
+.all-wrapper[data-left="1"] .section-wrap {
+    transform: translateX(24.8vw);
+}
+
+.all-wrapper[data-left="2"] .section-wrap {
+    transform: translateX(48.9vw);
+}
+
+.all-wrapper[data-left="3"] .section-wrap {
+    transform: translateX(73.9vw);
+}
+
+.all-wrapper[data-left="4"] .section-wrap {
+    transform: translateX(97.2vw);
+}
+
+.all-wrapper:not(.all-wrapper[data-left="0"]) .section-wrap::after {
+    opacity: .55;
+    z-index: 100;
+}
+
+.menu {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    // background: rgba(138, 152, 167, 0.7);
+}
+
+.menu.active {
+    z-index: 100;
+}
+
+.menu ul {
+    position: fixed;
+    height: 100%;
+    width: 0;
+    overflow: hidden;
+    background-color: #fff;
+    left: 0;
+    top: 0;
+    -webkit-box-shadow: 3px 10px 21px -6px rgba(115,111,115,1);
+    -moz-box-shadow: 3px 10px 21px -6px rgba(115,111,115,1);
+    box-shadow: 3px 10px 21px -6px rgba(115,111,115,1);
+}
+/*// .menu ul:first-of-type {*/
+/*//     -webkit-box-shadow: -2px 0px 21px -6px rgba(115,111,115,1);*/
+/*//     -moz-box-shadow: -2px 0px 21px -6px rgba(115,111,115,1);*/
+/*//     box-shadow: -2px 0px 21px -6px rgba(115,111,115,1);*/
+
+/*// }*/
+.menu ul li {
+    height: 6.4%;
+    border-bottom: 1px solid #f1f1f1;
+    display: flex;
+    align-items: center;
+    padding: 0 0 0 47px;
+    cursor: pointer;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.menu.active ul li.parents:not(.head-menu):after {
+    content: url(../images/menustr.png);
+    padding-right: 9%;
+}
+
+.menu ul.start {
+    z-index: 100
+}
+
+.menu ul.start li > .sub-menu {
+    display: none;
+}
+
+.menu ul li.head-menu {
+    width: 100%;
+    height: 23%;
+    display: block;
+    position: relative;
+    font-size: 121px;
+    font-family: 'sf_ui_display', 'sans-serif';
+    font-weight: bold;
+    color: rgba(123, 197, 183, 0.7);
+    line-height: 1.5;
+    text-align: center;
+    padding: 0;
+}
+
+.menu ul li.head-menu:after,
+.menu ul li.head-menu:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 33.33%;
+    height: 100%;
+    content: ' ';
+    border-right: 1px solid #f1f1f1;
+}
+
+.menu ul li.head-menu:after {
+    left: auto;
+    right: 0;
+    border-right: none;
+    border-left: 1px solid #f1f1f1;
+}
+.head-menu span {
+    overflow: hidden;
+    display: inline-block;
+    height: 100%;
+}
+.head-menu span span {
+    width: 100%;
+    transition: 0.5s;
+    transform: translate(-100%);
+}
+nav.active .head-menu span span {
+    transform: translate(0%);
+}
+.menu ul li:not(.head-menu):hover {
+    background-color: #f7f7f7;
+}
+.wrap-close-menu {
+    display: block;
+    position: absolute;
+    right: 6%;
+    top: 43.2%;
+    height: 30px;
+    width: 30px;
+}
+.fixed .wrap-close-menu {
+    top: 18.2%;
+}
+.close-menu {
+    display: block;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    cursor: pointer;
+    transition: .5s cubic-bezier(.27, -0.71, .95, 1.63);
+    z-index: 2;
+}
+
+.close-menu:before,
+.close-menu:after {
+    width: 100%;
+    height: 2px;
+    content: ' ';
+    display: block;
+    background-color: #485e76;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform-origin: 50% 50%;
+    transform: rotate(45deg);
+}
+
+.close-menu:after {
+    transform: rotate(-45deg);
+}
+
+.close-menu:hover {
+    transform: rotate(90deg);
+}
+
+.menu ul.close2 {
+    position: fixed;
+    display: block!important;
+    width: 25vw;
+    height: 100%;
+    top: 0;
+    left: 25vw;
+    background: rgba(138, 152, 167, 0.7);
+    z-index: 99;
+    background-color: #f7f7f7;
+    animation: menuclose2 .4s linear forwards;
+}
+
+@keyframes menuclose2 {
+    0% {
+        left: 24vw;
+    }
+    100% {
+        left: 0;
+    }
+}
+
+.menu ul.close3 {
+    position: fixed;
+    display: block!important;
+    width: 25vw;
+    height: 100%;
+    top: 0;
+    left: 49.0vw;
+    z-index: 98;
+    animation: menuclose3 .4s linear forwards;
+}
+
+@keyframes menuclose3 {
+    0% {
+        left: 49.0vw;
+    }
+    100% {
+        left: 25vw;
+    }
+}
+
+.menu ul.close4 {
+    position: fixed;
+    display: block!important;
+    width: 25vw;
+    height: 100%;
+    top: 0;
+    left: 74vw;
+    z-index: 97;
+    animation: menuclose4 .4s linear forwards;
+}
+
+@keyframes menuclose4 {
+    0% {
+        left: 74vw;
+    }
+    100% {
+        left: 49vw;
+    }
+}
+.menu2  {
+   z-index: 99;  
+}
+.menu3  {
+   z-index: 98;  
+}
+.menu4  {
+   z-index: 97;  
+}
+ul.sub-menu {
+    z-index: -1;
+    box-shadow:none;
+    -webkit-box-shadow:none;
+    -moz-box-shadow:none;
+}
+.menu ul.opened2 {
+    position: fixed;
+    display: block!important;
+    width: 25vw;
+    height: 100%;
+    top: 0;
+    // animation: menu2 .25s linear forwards;
+    animation: menu2 .4s linear forwards;
+    z-index: 99;
+}
+
+@keyframes menu2 {
+    0% {
+        // transform: translateX(0);
+        left: 0;
+    }
+    100% {
+        // transform: translateX(24vw);
+        left: 24vw;
+    }
+}
+
+.menu ul.opened3 {
+    position: fixed;
+    display: block!important;
+    width: 25vw;
+    height: 100%;
+    top: 0;
+    left: 49.0vw;
+    z-index: 98;
+    animation: menu3 .4s linear forwards;
+}
+
+@keyframes menu3 {
+    0% {
+        left: 25vw;
+    }
+    100% {
+        left: 49.0vw;
+    }
+}
+
+.menu ul.opened4 {
+    position: fixed;
+    display: block!important;
+    width: 26vw;
+    height: 100%;
+    top: 0;
+    animation: menu4 .4s linear forwards;
+    z-index: 97;
+}
+
+@keyframes menu4 {
+    0% {
+        left: 49vw;
+    }
+    100% {
+        left: 74vw;
+    }
+}
+
+.menu ul li {
+    background-color: #fff;
+}
+
+.menu ul.menu-additional {
+    background-color: #f7f7f7;
+}
+
+.menu ul.menu-additional li.head-menu {
+    font-size: 37px;
+    display: flex;
+    align-self: center;
+    justify-content: center;
+    background-color: #f7f7f7;
+    color: #fff;
+}
+.back-menu,
+.menu ul.menu-additional li.head-menu:before,
+.menu ul.menu-additional li.head-menu:after {
+    display: none;
+}

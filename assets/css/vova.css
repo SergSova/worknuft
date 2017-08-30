@@ -1,0 +1,281 @@
+.work-head {
+    text-transform: uppercase;
+    text-align: left;
+    margin: 85px 0 95px;
+}
+
+.work-links,
+.footer-wrap {
+    width: 100%;
+    max-width: 1170px;
+    margin: auto;
+    position: relative;
+}
+
+.work-links {
+    font-size: 0;
+    padding-bottom: 113px;
+}
+
+.work-link {
+    display: inline-block;
+    width: 16.66666667%;
+    vertical-align: middle;
+    margin: 15px 0;
+    filter: grayscale(100%);
+    transition: .3s;
+}
+
+.work-link:hover {
+    filter: grayscale(0);
+}
+
+.work-link img {
+    display: block;
+    margin: auto;
+    width: 70%;
+}
+
+
+/*interesting*/
+
+.interesting {
+    position: relative;
+}
+
+.interest-wrap {
+    text-align: justify;
+    font-size: 0;
+    position: relative;
+    padding-bottom: 112px;
+    width: 100%;
+    max-width: 1170px;
+    margin: auto;
+}
+
+.interest-wrap::after,
+.footer-logos::after,
+.footer-info::after,
+.footer-soc::after {
+    content: '';
+    display: inline-block;
+    width: 100%;
+}
+
+.interest-head {
+    padding: 103px 0 45px;
+}
+
+.interest-item {
+    display: inline-block;
+    vertical-align: top;
+}
+
+.interest-item img {
+    display: block;
+}
+
+.interest-text {
+    padding-top: 24px;
+    width: 70%;
+    margin: auto;
+    font-size: 12px;
+    line-height: 1.5;
+    text-align: center;
+    font-weight: 500;
+}
+
+.interesting .vertical-lines-subtitle {
+    top: 50px;
+    left: 24.6%;
+}
+
+.interesting .vertical-lines-subtitle .cutter div span {
+    color: #f2f2f2;
+}
+
+
+/*footer*/
+
+.footer {
+    background-color: #2a445f;
+}
+
+.footer-wrap {
+    padding-top: 40px;
+}
+
+.footer-logos {
+    font-size: 0;
+    text-align: justify;
+}
+
+.footer-info {
+    margin-top: 29px;
+    position: relative;
+    color: #fff;
+    text-align: justify;
+    overflow: hidden;
+}
+
+.footer-info > * {
+    display: inline-block;
+    vertical-align: middle;
+    text-align: left;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.footer-address span,
+.footer-reference span,
+.footer-links span {
+    color: #6ce3cf;
+}
+
+.footer-address {
+    width: 230px;
+}
+
+.footer-reference {
+    width: 193px;
+}
+
+.footer-links {
+    width: 158px;
+    height: 40px;
+    position: relative;
+}
+
+.footer-soc {
+    position: absolute;
+    text-align: justify;
+    font-size: 0;
+    left: -4px;
+    right: 4px;
+    top: 23px;
+}
+
+.footer-soc i {
+    color: #fff;
+    font-size: 18px;
+    transition: .2s;
+}
+
+.footer-soc i:hover {
+    color: #6ce3cf;
+}
+
+.footer-address::before {
+    content: '';
+    position: absolute;
+    height: 1px;
+    width: 100%;
+    background-color: rgb(57, 76, 95);
+    top: 0;
+}
+
+.footer-copyright {
+    text-align: center;
+}
+
+.footer-copyright span {
+    position: relative;
+    display: inline-block;
+    font-size: 10px;
+    color: rgb(157, 175, 192);
+    line-height: 35px;
+    text-transform: uppercase;
+}
+
+.footer-copyright span::before {
+    content: '';
+    position: absolute;
+    height: 1px;
+    top: 0;
+    left: -10%;
+    width: 120%;
+    background-color: rgb(57, 76, 95);
+}
+
+
+/*fresh*/
+
+.fresh {
+    margin-right: -14px;
+    font-size: 10px;
+    font-family: 'Roboto';
+    letter-spacing: 2px;
+    color: #ccc;
+    text-transform: uppercase;
+    line-height: 15px;
+    text-align: center;
+    cursor: pointer;
+    width: 165px;
+}
+
+.creative,
+.created {
+    position: relative;
+    top: 0;
+    font-family: 'Roboto';
+    font-weight: 700;
+    font-size: 9.3px;
+    color: #ccc;
+    padding: 3px 0;
+    -webkit-transition: all .5s linear;
+    transition: all .5s linear;
+}
+
+.created {
+    letter-spacing: 3.8px;
+}
+
+.creative {
+    letter-spacing: 1.9px;
+    margin-left: -1px;
+}
+
+.fresh-logo {
+    color: #ccc;
+    font-size: 21.99px;
+    position: relative;
+    text-align: center;
+    -webkit-transition: all .3s linear;
+    transition: all .3s linear;
+    right: 1px;
+}
+
+.fresh-logo span {
+    display: inline-block;
+    width: 31px;
+    -webkit-transition: all .5s linear, color .5s linear .35s;
+    transition: all .5s linear, color .5s linear .35s;
+    font-family: 'Conv_Vidaloka-Regular';
+}
+
+.fresh:hover > .creative {
+    top: 10px;
+    opacity: 0;
+    -webkit-transition: all .8s linear;
+    transition: all .8s linear;
+}
+
+.fresh:hover > .created {
+    top: -10px;
+    opacity: 0;
+    -webkit-transition: all .8s linear;
+    transition: all .8s linear;
+}
+
+.fresh:hover > a .fresh-logo span {
+    width: 25px;
+    color: #ef4136;
+    -webkit-transition: all .5s linear, color .5s linear .35s;
+    transition: all .5s linear, color .5s linear .35s;
+}
+
+.fresh:hover > a .fresh-logo {
+    color: #ef4136;
+    -webkit-transition: color .5s linear .3s;
+    transition: color .5s linear .3s;
+}

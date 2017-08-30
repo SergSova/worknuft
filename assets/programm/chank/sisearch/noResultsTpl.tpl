@@ -1,0 +1,1 @@
+<p>[[%sisea.no_results? &namespace=`sisea` &topic=`default`]]</p>

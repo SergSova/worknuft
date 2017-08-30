@@ -1,0 +1,1 @@
+<img class="chocolate-image-move" src="assets/images/empty.png" data-src="assets/images/[[+image]]" alt="[[+alt]]" title="[[+img_title]]">

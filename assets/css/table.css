@@ -1,0 +1,172 @@
+table {
+  margin-top: 34px;
+  text-align: left;
+}
+
+/*cells*/
+
+td {
+
+}
+
+thead td {
+  position: relative;
+  padding: 0 1.4%;
+  font-size: 12px;
+  line-height: 18px;
+  font-weight: 400;
+  text-align: left;
+  vertical-align: top;
+}
+
+td {
+  position: relative;
+  padding: 1% 2%;
+  text-align: center;
+  font-size: 12px;
+  line-height: 14px;
+  font-weight: 400;
+  vertical-align: middle;
+  border-right: 1px solid #d4d3d3;
+  border-bottom: 1px solid #d4d3d3;
+}
+
+td:last-child {
+  border-right: 0;
+}
+
+tbody tr:last-child td,
+td.last {
+  border-bottom: 0;
+}
+
+tbody tr {
+  height: 33.3333%;
+}
+
+/*td::before,*/
+/*td::after {*/
+  /*content: '';*/
+  /*position: absolute;*/
+  /*height: 100%;*/
+  /*width: 1px;*/
+  /*background: linear-gradient(to bottom, #d4d3d3, #d4d3d3 calc(100% - 6px), #fff calc(100% - 6px));*/
+  /*right: 0;*/
+  /*top: 0;*/
+/*}*/
+
+/*td::before,*/
+/*td::after {*/
+  /*background: linear-gradient(to bottom, #fff, #fff 6px, #d4d3d3 6px, #d4d3d3 calc(100% - 6px), #fff calc(100% - 6px));*/
+/*}*/
+
+/*td::before {*/
+  /*left: -1px;*/
+/*}*/
+
+thead td:nth-child(1) {
+  width: 23.9%;
+  padding: 0 4% 0 0;
+
+}
+
+thead td:nth-child(2) {
+  width: 18.8%;
+}
+
+thead td:nth-child(3) {
+  width: 15.2%;
+}
+
+thead td:nth-child(4) {
+  width: 12%;
+}
+
+thead td:nth-child(5) {
+  width: 14%;
+}
+/* UL  */
+thead tr ul {
+  margin: 16px 0 11px;
+}
+
+table ul {
+  position: relative;
+  padding-left: 25px;
+  margin: 11px 0;
+  font-size: 13px;
+  line-height: 18px;
+  font-weight: 400;
+  text-align: left;
+}
+
+table ul::before {
+  content: '';
+  display: block;
+  position: absolute;
+  background: #6ce3cf;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  left: 2px;
+  top: 5px;
+}
+
+table ul b {
+  padding-left: 12px;
+  line-height: 16px;
+  font-weight: 700;
+}
+
+table ul ul {
+  position: relative;
+  display: block;
+  padding-left: 24px;
+  margin: 4px 0 0 0;
+}
+
+table ul ul::before {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  border: 1px solid #6ce3cf;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0);
+  left: 1px;
+  top: 6px;
+}
+tbody b {
+  text-align: center;
+  font-size: 14px;
+  line-height: 17px;
+  font-weight: 500;
+}
+
+
+
+/*tbody tr:first-child td:first-child {*/
+  /*vertical-align: top;*/
+/*}*/
+
+/*tbody tr:first-child td:first-child::after {*/
+  /*display: none;*/
+/*}*/
+
+/*tbody:last-child tr:last-child td,*/
+/*tbody:last-child tr:first-child td:nth-child(5),*/
+/*tbody:last-child td.first,*/
+/*tbody:last-child td.last {*/
+  /*border-bottom: 1px solid rgba(255, 255, 255, 0);*/
+/*}*/
+
+
+/*td.first::before,*/
+/*td.last::after {*/
+  /*display: none;*/
+/*}*/
+
+/*td.first {*/
+  /*text-align: left;*/
+/*}*/

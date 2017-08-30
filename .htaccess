@@ -1,0 +1,24 @@
+  RewriteEngine On
+  RewriteBase /
+
+  RewriteCond %{HTTP_HOST} .
+  RewriteCond %{HTTP_HOST} !^18.j2landing\.com [NC]
+  RewriteRule (.*) http://18.j2landing.com/$1 [R=301,L]
+
+  # redirect all requests to /ua/favicon.ico and /en/favicon.ico and /ru/favicon.ico to /favicon.ico
+  #RewriteCond %{HTTP:Accept-Language} !^ru/ [NC]
+  #RewriteRule ^$ ru/ [R=301,L]
+  #RewriteRule ^$ en/ [R=301,L]
+  #RewriteRule ^$ ua/ [R=301,L]
+  RewriteRule ^(ru|en|ua)/favicon.ico$ favicon.ico [L,QSA]
+
+  # redirect all requests to /en/assets* and /ru/assets* and /ua/assets*
+  # to /assets*
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteRule ^(ru|en|ua)/assets(.*)$ assets$2 [L,QSA]
+
+  # redirect all other requests to /en/* and /ru/* and /ua/*  to index.php and set the cultureKey parameter
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteRule ^(ru|en|ua)?/?(.*)$ index.php?cultureKey=$1&q=$2 [L,QSA]
