@@ -1,0 +1,163 @@
+[[$head?&articles=`1`]]
+
+<section class="section4">
+    <h2>[[#[[*parent]].pagetitle]]</h2>
+    <div class="section-wrap">
+        <div class="container">
+            [[*parent:ne=`0`:then=`
+            <div class="events block-left">
+                <div class="scroll no-bar">
+                    <div class="scroll-inner">
+                        [[pdoMenu?
+                        &parents=`[[#[[*parent]].parent]]`
+                        &firstClass=`list-top`
+                        &levelClass=`level`
+                        &tpl=`@INLINE
+                        <div class="block">
+                            <div class="top"><a href="[[+link]]"><h6>{{+menutitle:strip_tags}}</h6></a></div>
+                        </div>
+                        `
+                        &tplParentRow=`@INLINE
+                        <div class="block">
+                            <div class="top"><h6>{{+menutitle:strip_tags}}</h6></div>
+                            [[+wrapper]]
+                        </div>
+                        `
+                        &tplInnerRow=`@INLINE
+                        <div class="list sub-list [[+class]]"><a href="[[+link]]" class="link_list "><span>{{+menutitle:strip_tags}}</span>
+                                <div class="triangle-right"></div>
+                            </a>[[+wrapper]]
+                        </div>
+                        `
+                        &tplInner=`@INLINE
+                        <div class="text">[[+wrapper]]</div>
+                        `
+                        ]]
+                    </div>
+                </div>
+            </div>
+            `]]
+            <div class="content block-center">
+                [[*parent:!in=`65`:then=`
+                <nav class="fall-down-main-menu clear">
+                    <ul class="content-button type_list js-tabs-list">
+                        <li class="content-button-li">Анонси</li>
+                        <li class="content-button-li">Оголошення</li>
+                        <li class="content-button-li">Події</li>
+                    </ul>
+                    <ul class="table_category category_list">
+                        <a href="#" class="fall-down-click drop-down-init">
+                            <span>КАТЕГОРІЯ</span>
+                            <div class="triangle-down-nav"></div>
+                        </a>
+                        <ul class="fall-down-li drop-down">
+                            <li>УНІВЕРСИТЕТ</li>
+                            <li>ОСВІТА</li>
+                            <li>ДОЗВІЛЛЯ</li>
+                            <li>НАУКА</li>
+                            <li>СПОРТ</li>
+                        </ul>
+                    </ul>
+                </nav>
+                `]]
+                <div class="caption">
+                    <h3>[[*pagetitle]]</h3>
+                    <p>[[+article_date:strtotime:date=`%d.%m.%Y`]]</p>
+                </div>
+                <img src="[[*img_main]]" class="img_content" alt="[[*pagetitle]]">
+                <!--<div class="img_content"></div>-->
+                <div class="text-content">
+                    [[*content]]
+                    <div class="social">
+                        <a href="#" tabindex="-1"><i class="icon-twitter"></i></a>
+                        <a href="#" tabindex="-1"><i class="icon-facebook-squared"></i></a>
+                    </div>
+                </div>
+                <div class="slaider">
+                    <div class="slider simple-silk customPagin pagin-custom-place chocolate-slider nav-for">
+                        [[!getImageList?
+                        &docid=`[[*id]]`
+                        &tvname=`migx-article-slider`
+                        &tpl=`@CODE:
+                        <div class="inner slide">
+                            <div class="img-wrap chocolate-image-move">
+                                <img src="[[+image]]" alt="[[+alt]]" title="[[+img_title]]">
+                            </div>
+                        </div>
+                        `
+                        ]]
+                    </div>
+
+                    <div class="slider simple-silk nav-from no-nav chocolate-slider">
+                        [[!getImageList?
+                        &docid=`[[*id]]`
+                        &tvname=`migx-article-slider`
+                        &sortBy=`pagetitle`
+                        &sortDir=`DESC`
+                        &tpl=`@CODE:
+                        <div class="inner slide">
+                            <div class="img-wrap chocolate-image-move">
+                                <img src="[[+image]]" alt="[[+alt]]" title="[[+img_title]]">
+                            </div>
+                        </div>
+                        `
+                        ]]
+                    </div>
+                    <div class="custom-place"></div>
+                </div>
+                <div class="additional-articles">
+                    <h2>Читайте також:</h2>
+                    <div class="articles-all">
+                        <article class="article">
+                            <figure>
+                                <img src="assets/images/artur/img_content-new.png" alt="">
+                                <figcaption>
+                                    28 квитня 2017 року у рамках лекції професора кафедри туристичного
+                                    та готельного бізнесу Iрини Антоненко з дисципліни "інноваційні проекти в ..."
+                                    <a class="read-more">ЧИТАТИ ДАЛI</a>
+                                </figcaption>
+                            </figure>
+                            <p>Просування культурної спадщини<br><span>30.05.2017</span></p>
+                        </article>
+                        <article class="article">
+                            <figure>
+                                <img src="assets/images/artur/img_content-new.png" alt="">
+                                <figcaption>
+                                    28 квитня 2017 року у рамках лекції професора кафедри туристичного
+                                    та готельного бізнесу Iрини Антоненко з дисципліни "інноваційні проекти в ..."
+                                    <a class="read-more">ЧИТАТИ ДАЛI</a>
+                                </figcaption>
+                            </figure>
+                            <p>Просування культурної спадщини<br><span>30.05.2017</span></p>
+                        </article>
+                        <article class="article">
+                            <figure>
+                                <img src="assets/images/artur/img_content-new.png" alt="">
+                                <figcaption>
+                                    28 квитня 2017 року у рамках лекції професора кафедри туристичного
+                                    та готельного бізнесу Iрини Антоненко з дисципліни "інноваційні проекти в ..."
+                                    <a class="read-more">ЧИТАТИ ДАЛI</a>
+                                </figcaption>
+                            </figure>
+                            <p>Просування культурної спадщини<br><span>30.05.2017</span></p>
+                        </article>
+                        <article class="article article-none">
+                            <figure>
+                                <img src="assets/images/artur/img_content-new.png" alt="">
+                                <figcaption>
+                                    28 квитня 2017 року у рамках лекції професора кафедри туристичного
+                                    та готельного бізнесу Iрини Антоненко з дисципліни "інноваційні проекти в ..."
+                                    <a class="read-more">ЧИТАТИ ДАЛI</a>
+                                </figcaption>
+                            </figure>
+                            <p>Просування культурної спадщини<br><span>30.05.2017</span></p>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--footer-->
+[[$foot?&articles=`1`]]
+

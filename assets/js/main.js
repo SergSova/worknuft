@@ -378,7 +378,13 @@ if ($('.map-wrap').length) {
 }
 var that = [];
 $(document).ready(function () {
-
+    $('.moveto').each(function(){
+        k = $(this).html()
+        n = $(this).parents($(this).attr('data-parent')).find($(this).attr('data-to'));
+        console.log('.' + $(this).attr('data-to'))
+        $(k).appendTo(n);
+        $(this).remove();
+    });
     slidesVideo = $('.video-gallery .slider .inner-video-slide');
     slideVideo = '';
     slidesPhoto = $('.photo-gallery .slider .inner-photo-slide');

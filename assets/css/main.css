@@ -62,8 +62,7 @@
     -o-transform: rotate(0deg) translate(0,2px);
     transform: rotate(0deg) translate(0,2px);
 }
-
-/*// .sandwitch.active span:nth-child(1) {
+// .sandwitch.active span:nth-child(1) {
 //     top: 9px;
 //     width: 0%;
 //     left: 50%;
@@ -84,7 +83,7 @@
 //     top: 9px;
 //     width: 0%;
 //     left: 50%;
-// }*/
+// }
 @-webkit-keyframes twist {
     0% {
         transform: rotate(0deg);
@@ -1165,13 +1164,13 @@
     opacity: .2;
 }
 
-/*.section9 .reviewsSlider::before {
+.section9 .reviewsSlider::before {
     content: '';
     position: absolute;
     background: url(images/orden.png) no-repeat;
     width: 237px;
     height: 288px;
-}*/
+}
 
 .section9 .reviewsSlider .inner {
     width: 50%;

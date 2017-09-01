@@ -10,17 +10,18 @@ h1 {
 .title {
     text-align: center;
 }
-.vstupnik h1{
+.vstupnik h1 {
     text-transform: uppercase;
     text-align: center;
     display: inline-block;
-    width: 80% ;
+    width: 80%;
 }
 
 .section1 .slider .slider-nav {
     width: inherit;
-    text-align: left;
+    text-align: center;
 }
+
 .section2{
 }
 
@@ -158,7 +159,7 @@ h1 {
 }
 h2 {
     display: inline-block;
-    padding: 110px 0 30px;
+    padding: 110px 0 50px;
 }
 .horizontal-lines-subtitle {
     top: 50px;
@@ -519,7 +520,7 @@ element.style {
     padding-bottom: 0;
 }
 .section7 h2 {
-    padding-top: 98px;
+    padding-top: 90px;
 }
 .dozvillya-wrap {
     display: flex;
@@ -527,7 +528,6 @@ element.style {
     margin: 0 auto;
     z-index: 1;
     position: relative;
-    padding-bottom: 70px;
 }
 .doz {
     width: 24.6%;
@@ -570,7 +570,7 @@ element.style {
 }
 .doz:hover ul li a {
     top:0px;
-    transition: .4s linear .4s,color .2s;;
+    transition: .4s linear .4s,color .2s;
 }
 .doz .doz-init-text div{
     overflow: hidden;
@@ -588,7 +588,7 @@ element.style {
     transition: .4s linear;
 }
 .section7 .vertical-lines span {
-    border-color: #dddcdc;
+    border-color: #f1f1f1;
 }
 /***************  sec8 *******/
 .section8 {
@@ -744,14 +744,112 @@ article .read-more:hover .icon-arrow-right:before {
     right:0;
     opacity: 1;
 }
-.section11  .button {
+.section11  .button, .section5 .button {
     background: #2a445f;
     position: relative;
     bottom: 2%;
     float:right;
-    margin:30px 0  100px;
+    margin-bottom: 30px;
 }
+
 .section11  .button:after {
     content:' ';
     clear: both;
 }
+
+/*   STYLES FOR Studentam  */
+
+.slider-stud {
+    width: 100% !important;
+    margin: 0 !important;
+}
+
+.section1 .slider-stud .slider-nav {
+    bottom: 0 !important;
+}
+
+.slider .slider-nav {
+    padding-bottom: 60px;
+}
+
+.doz-text-bl-big ul li {
+    padding: 5px 0;    
+}
+
+.doz-text-bl-big ul li a {
+    font-size: 17px;
+}
+
+.clearboth {
+    clear: both;
+}
+
+.inform-icon-stud {
+    height: 64px;
+    width: 81px;
+    position: relative;
+    background-image: url("../images/vstup/sprite-studentam.png");
+}
+.inform-b-s:nth-child(2) .inform-icon-stud {
+    background-position: left -64px;
+}
+.inform-b-s:nth-child(3) .inform-icon-stud {
+    background-position: left -128px;
+}
+.inform-b-s:nth-child(4) .inform-icon-stud {
+    background-position: left -192px;
+}
+.inform-b-s:nth-child(5) .inform-icon-stud {
+    background-position: left -256px;
+}
+.inform-b-s:nth-child(6) .inform-icon-stud {
+    background-position: left -320px;
+}
+.inform-b-s:nth-child(7) .inform-icon-stud {
+    background-position: left -384px;
+}
+.inform-b-s:nth-child(8) .inform-icon-stud {
+    background-position: left -448px;
+}
+
+.inform-b-s:hover .inform-icon-stud {
+    background-position-x: -83px;
+    top:-60px;
+}
+
+.doz-stud {
+display: inline-block;
+}
+
+.dozvillya-wrap-stud {    
+    font-size: 0;
+    display: block;
+}
+
+.section-margin {
+    margin-top: 5%;
+}
+
+.button-stud {
+    margin-bottom: 25px !important;
+}
+
+.articles-stud {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.article-stud {
+    width: 30%;
+    display: inline-block;    
+    padding: 0  1% 10px;
+}
+
+.article-stud img {
+    width: 100%;
+    height: auto;
+}
+
+

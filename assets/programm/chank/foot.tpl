@@ -42,13 +42,13 @@
 </footer>
 <div class="overlay"></div>
 </div>
-<script src="https://code.jquery.com/jquery-2.2.4.min.js"
-        integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
-        crossorigin="anonymous"></script>
-<script src="assets/js/lib/slick.min.js"></script>
-<script src="assets/js/lib/jquery.mCustomScrollbar.min.js"></script>
-<script src="assets/js/menu.js"></script>
-<script src="assets/js/main.js"></script>
-
+<script src="/assets/js/lib/jquery-2.2.4.min.js"></script>
+<script src="/assets/js/lib/slick.min.js"></script>
+<script src="/assets/js/lib/jquery.mCustomScrollbar.min.js"></script>
+<script src="/assets/js/menu.js"></script>
+[[+articles:is=`1`:then=`<script src="/assets/js/device.min.js"></script>`]]
+<script src="/assets/js/main.js"></script>
+[[+articles:is=`1`:then=`<script src="/assets/js/article.js"></script>`]]
+<!---->
 </body>
 </html>

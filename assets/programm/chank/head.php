@@ -7,15 +7,19 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     [[$seo]]
-    <link rel="stylesheet" href="assets/css/reset.css">
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/css/base.css">
-    [[+vstup:is=`1`:then=`<link rel="stylesheet" href="assets/css/vstupnik.css">
+    <link rel="stylesheet" href="/assets/css/reset.css">
+    <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/assets/css/base.css">
+    [[+vstup:is=`1`:then=`
+    <link rel="stylesheet" href="//assets/css/vstupnik.css">
     `]]
-    <link rel="stylesheet" href="assets/css/slick.css">
-    <link rel="stylesheet" href="assets/css/jquery.mCustomScrollbar.min.css">
-    <link rel="stylesheet" href="assets/css/menu.css">
-    <link rel="stylesheet" href="assets/css/media.css">
+    <link rel="stylesheet" href="/assets/css/slick.css">
+    <link rel="stylesheet" href="/assets/css/jquery.mCustomScrollbar.min.css">
+    <link rel="stylesheet" href="/assets/css/menu.css">
+    <link rel="stylesheet" href="/assets/css/media.css">
+    [[+articles:is=`1`:then=`
+    <link rel="stylesheet" href="/assets/css/article.css">
+    `]]
 </head>
 <body [[+classex:ne=``:then=`class="[[+classex]]"`]]>
 
@@ -67,9 +71,10 @@
             </div>
             <div class="bottom">
                 <div class="container">
-                    <div class="logo-fixed"><img
-                                src="assets/images/logo-small.png"
-                                alt="Логотип"></div>
+                    <!--todo сделать нормальную ссылку на главную-->
+                    <div class="logo-fixed">
+                        <img src="assets/images/logo-small.png" alt="Логотип">
+                    </div>
                     <div class="menu-toggle active">
                         <div class="sandwitch">
                             <span></span>
@@ -92,7 +97,7 @@
                     </div>
                     <nav>
                         <ul class="when-fixed">
-                            <li><a href="#">Вступнику</a></li>
+                            <li><a href="[[~[[%45:bid]]]]">Вступнику</a></li>
                             <li><a href="#">Студенту</a></li>
                             <li><a href="#">Співробітнику</a></li>
                             <li class="icon-text"><a href="#">
@@ -120,3 +125,11 @@
             </div>
         </div>
     </header>
+    <div class="container">
+        [[!pdoCrumbs?
+        &showAtHome=`0`
+        &showHome=`1`
+        &tpl=`@INLINE <li><a href="[[+link]]">{{+menutitle:strip_tags}}</a></li>`
+        &tplWrapper=`@INLINE <div class="breadcrumbs">[[+output]]</div>`
+        ]]
+    </div>

@@ -1,6 +1,6 @@
 /.idea/
 
-/vstupnik.html
+/*.html
 /index.php
 /config.core.php
 /entrants/index.php
@@ -12,3 +12,4 @@
 /entrants/.idea/
 /assets/html/
 /assets/images/
+/assets/backup/

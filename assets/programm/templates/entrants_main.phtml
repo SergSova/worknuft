@@ -2,10 +2,10 @@
 
 <section class="section1">
     <div class="container">
-        <div class="breadcrumbs">
+        <!--<div class="breadcrumbs">
             <li><a href="">Головна</a></li>
             <li><a href="">Вступнику</a></li>
-        </div>
+        </div>-->
         <div class="title">
             <h1>[[*vstup_title_sec01]]</h1>
         </div>
@@ -17,9 +17,8 @@
             &tvname=`migx-vstup-section-01`
             &tpl=`@CODE:
             <div class="slide inner">
-                <div class="image chocolate-image-move"><img src="[[+image]]"
-                                                             alt="[[+alt]]"
-                                                             title="[[+img_title]]">
+                <div class="image chocolate-image-move">
+                    <img src="[[+image]]" alt="[[+alt]]" title="[[+img_title]]">
                 </div>
             </div>
             `
@@ -45,6 +44,7 @@
                 &includeContent=`1`
                 &includeTVs=`vstup_bg,vstup_icon`
                 &tvPrefix=``
+                &where=`{"template:!=":10}`
                 &showLog=`0`
                 &context=`[[*context_key]]`
                 ]]
@@ -129,22 +129,20 @@
                                      title="[[+img_title]]">
                                 <div class="hover-this"></div>
                             </div>
+                            <div class="moveto"
+                                 data-to=".slider.nav-from.no-nav.komfort-text"
+                                 data-parent=".komfort-slider-wrap">
+                                <div class="text">[[+title]]
+                                    <div>
+                                        <hr class="small-line">
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                         `
                         ]]
                     </div>
                     <div class="slider nav-from no-nav komfort-text">
-                        [[!getImageList?
-                        &docid=`[[*id]]`
-                        &tvname=`migx-komfort-social_behavior-slider`
-                        &tpl=`@CODE:
-                        <div class="text">[[+title]]
-                            <div>
-                                <hr class="small-line">
-                            </div>
-                        </div>
-                        `
-                        ]]
                     </div>
                 </div><!--social_behavior-->
                 <div class="komfort-slider-wrap">
@@ -159,22 +157,20 @@
                                      title="[[+img_title]]">
                                 <div class="hover-this"></div>
                             </div>
+                            <div class="moveto"
+                                 data-to=".slider.nav-from.no-nav.komfort-text"
+                                 data-parent=".komfort-slider-wrap">
+                                <div class="text">[[+title]]
+                                    <div>
+                                        <hr class="small-line">
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                         `
                         ]]
                     </div>
                     <div class="slider nav-from no-nav komfort-text">
-                        [[!getImageList?
-                        &docid=`[[*id]]`
-                        &tvname=`migx-komfort-sport_komplex-slider`
-                        &tpl=`@CODE:
-                        <div class="text">[[+title]]
-                            <div>
-                                <hr class="small-line">
-                            </div>
-                        </div>
-                        `
-                        ]]
                     </div>
                 </div><!--sport_komplex-->
                 <div class="komfort-slider-wrap">
@@ -189,23 +185,21 @@
                                      title="[[+img_title]]">
                                 <div class="hover-this"></div>
                             </div>
+                            <div class="moveto"
+                                 data-to=".slider.nav-from.no-nav.komfort-text"
+                                 data-parent=".komfort-slider-wrap">
+                                <div class="text">[[+title]]
+                                    <div>
+                                        <hr class="small-line">
+                                    </div>
+                                </div>
+                                <div>
                         </div>
                         `
                         ]]
-                    </div>
-                    <div class="slider nav-from no-nav komfort-text">
-                        [[!getImageList?
-                        &docid=`[[*id]]`
-                        &tvname=`migx-komfort-canteen-slider`
-                        &tpl=`@CODE:
-                        <div class="text">[[+title]]
-                            <div>
-                                <hr class="small-line">
                             </div>
-                        </div>
-                        `
-                        ]]
-                    </div>
+                            <div class="slider nav-from no-nav komfort-text">
+                            </div>
                 </div><!--canteen-->
             </div>
         </div>
@@ -233,173 +227,15 @@
                     [[pdoResources?
                     &parents=`67`
                     &includeContent=`1`
-                    &includeTVs=`avatarfullname`
+                    &includeTVs=`teachers_avatar,teachers_name,teachers_position,teachers_about,teachers_twitter,teachers_facebook`
                     &tvPrefix=``
-                    &showLog=`1`
+                    &showLog=`0`
                     &showHidden=`1`
                     &context=`[[*context_key]]`
-                    &tpl=`@INLINE <div class="inner slide"><div class="image chocolate-image-move">
-                            <img src="[[+avatar]]" alt="[[+fullname]]"/>
-                        </div></div>`
+                    &tpl=`teachers-slider-image-item`
                     ]]
-                    <div class="inner slide">
-                        <div class="image chocolate-image-move">
-                            <img src="assets/images/vstup/img-big.jpg" alt=""/>
-                        </div>
-                    </div>
-                    <div class="inner slide">
-                        <div class="image chocolate-image-move">
-                            <img src="assets/images/vstup/img-big.jpg" alt=""/>
-                        </div>
-                    </div>
-                    <div class="inner slide">
-                        <div class="image chocolate-image-move">
-                            <img src="assets/images/vstup/img-big.jpg" alt=""/>
-                        </div>
-                    </div>
                 </div>
                 <div class="slider slider-text-teacher customPagin pagin-custom-place nav-for">
-                    [[pdoResources?
-                    &parents=`67`
-                    &includeContent=`1`
-                    &includeTVs=`avatarfullname`
-                    &tvPrefix=``
-                    &showLog=`1`
-                    &showHidden=`1`
-                    &context=`[[*context_key]]`
-                    &tpl=`@INLINE <div class="teachers-text">
-                        <div class="teachers-name">[[+teachers_name]]</div>
-                        <div class="position">[[+teachers_position]]</div>
-                        <div class="teachers-about ">[[+teachers_about]]</div>
-                        <div class="social">
-                            <a href="[[+teachers_twitter]]" tabindex="-1"><i
-                                        class="icon-twitter"></i></a>
-                            <a href="[[+teachers_facebook]]" tabindex="-1"><i
-                                        class="icon-facebook-squared"></i></a>
-                        </div>
-                        <a href="[[~[[+id]]]]" class="button">ДЕТАЛЬНІШЕ</a>
-                    </div>`
-                    ]]
-                    <div class="teachers-text">
-                        <div class="teachers-name">Валерія Шевченко</div>
-                        <div class="position">
-                            Декан1 факультету Інженерної механіки
-                            та пакувальної техніки
-                        </div>
-                        <div class="teachers-about ">
-                            <p>
-                                “Інженерна освіта є найважливішою із усіх
-                                існуючих галузей знань, яка бере свій
-                                початок із періоду
-                                зародження людства, від моменту, коли з’явилися
-                                перші знаряддя праці та елементарні
-                                механізми.
-                                Накопичений досвід, знання, вміння в інженерній
-                                освіті - запорука якісного навчання
-                                та формування
-                                сучасного інженера який був, є і буде головним
-                                фахівцем на підприємствах різних
-                                галузей промисловості.
-                            </p>
-                            <p>
-                                Вміння в інженерній освіті - запорука якісного
-                                навчання та формування сучасного
-                                інженера який був, є і
-                                буде головним фахівцем на підприємствах різних
-                                галузей промисловості. Накопичений
-                                досвід, знання,
-                                вміння в інженерній освіті - запорука якісного
-                                навчання та формування сучасного...”
-                            </p>
-                        </div>
-                        <div class="social">
-                            <a href="#" tabindex="-1"><i
-                                        class="icon-twitter"></i></a>
-                            <a href="#" tabindex="-1"><i
-                                        class="icon-facebook-squared"></i></a>
-                        </div>
-                        <a href="" class="button">ДЕТАЛЬНІШЕ</a>
-                    </div>
-                    <div class="teachers-text">
-                        <div class="teachers-name">Валерія Шевченко</div>
-                        <div class="position">
-                            Декан2 факультету Інженерної механіки
-                            та пакувальної техніки
-                        </div>
-                        <div class="teachers-about ">
-                            <p>
-                                “Інженерна освіта є найважливішою із усіх
-                                існуючих галузей знань, яка бере свій
-                                початок із періоду
-                                зародження людства, від моменту, коли з’явилися
-                                перші знаряддя праці та елементарні
-                                механізми.
-                                Накопичений досвід, знання, вміння в інженерній
-                                освіті - запорука якісного навчання
-                                та формування
-                                сучасного інженера який був, є і буде головним
-                                фахівцем на підприємствах різних
-                                галузей промисловості.
-                            </p>
-                            <p>
-                                Вміння в інженерній освіті - запорука якісного
-                                навчання та формування сучасного
-                                інженера який був, є і
-                                буде головним фахівцем на підприємствах різних
-                                галузей промисловості. Накопичений
-                                досвід, знання,
-                                вміння в інженерній освіті - запорука якісного
-                                навчання та формування сучасного...”
-                            </p>
-                        </div>
-                        <div class="social">
-                            <a href="#" tabindex="-1"><i
-                                        class="icon-twitter"></i></a>
-                            <a href="#" tabindex="-1"><i
-                                        class="icon-facebook-squared"></i></a>
-                        </div>
-                        <a href="" class="button">ДЕТАЛЬНІШЕ</a>
-                    </div>
-                    <div class="teachers-text">
-                        <div class="teachers-name">Валерія Шевченко</div>
-                        <div class="position">
-                            Декан3 факультету Інженерної механіки
-                            та пакувальної техніки
-                        </div>
-                        <div class="teachers-about ">
-                            <p>
-                                “Інженерна освіта є найважливішою із усіх
-                                існуючих галузей знань, яка бере свій
-                                початок із періоду
-                                зародження людства, від моменту, коли з’явилися
-                                перші знаряддя праці та елементарні
-                                механізми.
-                                Накопичений досвід, знання, вміння в інженерній
-                                освіті - запорука якісного навчання
-                                та формування
-                                сучасного інженера який був, є і буде головним
-                                фахівцем на підприємствах різних
-                                галузей промисловості.
-                            </p>
-                            <p>
-                                Вміння в інженерній освіті - запорука якісного
-                                навчання та формування сучасного
-                                інженера який був, є і
-                                буде головним фахівцем на підприємствах різних
-                                галузей промисловості. Накопичений
-                                досвід, знання,
-                                вміння в інженерній освіті - запорука якісного
-                                навчання та формування сучасного...”
-                            </p>
-                        </div>
-                        <div class="social">
-                            <a href="#" tabindex="-1"><i
-                                        class="icon-twitter"></i></a>
-                            <a href="#" tabindex="-1"><i
-                                        class="icon-facebook-squared"></i></a>
-                        </div>
-                        <a href="" class="button">ДЕТАЛЬНІШЕ</a>
-                    </div>
                 </div>
                 <div class="custom-place"></div>
             </div>
@@ -416,17 +252,17 @@
         <div class="sec-head">
             <div class="vertical-wrap">
                 <div class="vertical-lines-subtitle lines-subtitle">
-                    <div class="h2">ДОЗВІЛЛЯ</div>
+                    <div class="h2">[[*vstup_title_sec07]]</div>
                     <div class="cutter">
-                        <div><span><i>ДОЗВІЛЛЯ</i></span></div>
-                        <div><span><i>ДОЗВІЛЛЯ</i></span></div>
-                        <div><span><i>ДОЗВІЛЛЯ</i></span></div>
-                        <div><span><i>ДОЗВІЛЛЯ</i></span></div>
+                        <div><span><i>[[*vstup_title_sec07]]</i></span></div>
+                        <div><span><i>[[*vstup_title_sec07]]</i></span></div>
+                        <div><span><i>[[*vstup_title_sec07]]</i></span></div>
+                        <div><span><i>[[*vstup_title_sec07]]</i></span></div>
                     </div>
                 </div>
             </div>
             <div class="container">
-                <h2>Студентом НУХТ бути цікаво!</h2>
+                <h2>[[*vstup_subtitle_sec07]]</h2>
             </div>
             <div class="dozvillya-wrap">
                 <div class="doz doz_1">
@@ -504,178 +340,30 @@
         <div class="sec-head">
             <div class="vertical-wrap">
                 <div class="vertical-lines-subtitle when-grey lines-subtitle">
-                    <div class="h2">ФАКТИ</div>
+                    <div class="h2">[[*vstup_title_sec08]]</div>
                     <div class="cutter">
-                        <div><span><i>ФАКТИ</i></span></div>
-                        <div><span><i>ФАКТИ</i></span></div>
-                        <div><span><i>ФАКТИ</i></span></div>
-                        <div><span><i>ФАКТИ</i></span></div>
+                        <div><span><i>[[*vstup_title_sec08]]</i></span></div>
+                        <div><span><i>[[*vstup_title_sec08]]</i></span></div>
+                        <div><span><i>[[*vstup_title_sec08]]</i></span></div>
+                        <div><span><i>[[*vstup_title_sec08]]</i></span></div>
                     </div>
                 </div>
             </div>
             <div class="container">
-                <h2>Реальні факти від реальних студентів</h2>
-
+                <h2>[[*vstup_subtitle_sec08]]</h2>
                 <div class="slider-fakt-wrap">
                     <div class="slider-fakt-image slider not-fade-slider centerSlide  nav-for customPagin pagin-custom-place"
                          data-slides="5">
-                        <div class="inner slide">
-                            <img src="assets/images/vstup/slide.jpg" alt="">
-                        </div>
-                        <div class="inner slide">
-                            <img src="assets/images/vstup/slide.jpg" alt="">
-                        </div>
-                        <div class="inner slide">
-                            <img src="assets/images/vstup/slide.jpg" alt="">
-                        </div>
-                        <div class="inner slide">
-                            <img src="assets/images/vstup/slide.jpg" alt="">
-                        </div>
-                        <div class="inner slide">
-                            <img src="assets/images/vstup/slide.jpg" alt="">
-                        </div>
-                        <div class="inner slide">
-                            <img src="assets/images/vstup/slide.jpg" alt="">
-                        </div>
-                        <div class="inner slide">
-                            <img src="assets/images/vstup/slide.jpg" alt="">
-                        </div>
-                        <div class="inner slide">
-                            <img src="assets/images/vstup/slide.jpg" alt="">
-                        </div>
-                        <div class="inner slide">
-                            <img src="assets/images/vstup/slide.jpg" alt="">
-                        </div>
-                        <div class="inner slide">
-                            <img src="assets/images/vstup/slide.jpg" alt="">
-                        </div>
+                        [[!getImageList?
+                        &docid=`[[*id]]`
+                        &tvname=`migx-vstup-fakt-slider`
+                        &tpl=`vstup-fakt-slider-item`
+                        ]]
                     </div>
                     <div class="clear"></div>
-                    <div class="slider student-info no-nav nav-from">
-                        <div class="inner slide">
-                            <div class="name-student">Павло Бондаренко1</div>
-                            <div class="student-learn">СТУДЕНТ ІІ КУРСУ
-                                САНІТАРНО-ТЕХНІЧНОГО ФАКУЛЬТЕТУ
-                            </div>
-                            <div class="student-text">“ Цінності й унікальні
-                                взаємини між викладачами і студентами
-                                факультету стали
-                                для мене надійною підвалиною для подальшого
-                                професійного й особистого розвитку.”
-                            </div>
-                        </div>
-                        <div class="inner slide">
-                            <div class="name-student">Павло Бондаренко2</div>
-                            <div class="student-learn">СТУДЕНТ ІІ КУРСУ
-                                САНІТАРНО-ТЕХНІЧНОГО ФАКУЛЬТЕТУ
-                            </div>
-                            <div class="student-text">“ Цінності й унікальні
-                                взаємини між викладачами і студентами
-                                факультету стали
-                                для мене надійною підвалиною для подальшого
-                                професійного й особистого розвитку.”
-                            </div>
-                        </div>
-                        <div class="inner slide">
-                            <div class="name-student">Павло Бондаренко3</div>
-                            <div class="student-learn">СТУДЕНТ ІІ КУРСУ
-                                САНІТАРНО-ТЕХНІЧНОГО ФАКУЛЬТЕТУ
-                            </div>
-                            <div class="student-text">“ Цінності й унікальні
-                                взаємини між викладачами і студентами
-                                факультету стали
-                                для мене надійною підвалиною для подальшого
-                                професійного й особистого розвитку.”
-                            </div>
-                        </div>
-                        <div class="inner slide">
-                            <div class="name-student">Павло Бондаренко4</div>
-                            <div class="student-learn">СТУДЕНТ ІІ КУРСУ
-                                САНІТАРНО-ТЕХНІЧНОГО ФАКУЛЬТЕТУ
-                            </div>
-                            <div class="student-text">“ Цінності й унікальні
-                                взаємини між викладачами і студентами
-                                факультету стали
-                                для мене надійною підвалиною для подальшого
-                                професійного й особистого розвитку.”
-                            </div>
-                        </div>
-                        <div class="inner slide">
-                            <div class="name-student">Павло Бондаренко5</div>
-                            <div class="student-learn">СТУДЕНТ ІІ КУРСУ
-                                САНІТАРНО-ТЕХНІЧНОГО ФАКУЛЬТЕТУ
-                            </div>
-                            <div class="student-text">“ Цінності й унікальні
-                                взаємини між викладачами і студентами
-                                факультету стали
-                                для мене надійною підвалиною для подальшого
-                                професійного й особистого розвитку.”
-                            </div>
-                        </div>
-                        <div class="inner slide">
-                            <div class="name-student">Павло Бондаренко6</div>
-                            <div class="student-learn">СТУДЕНТ ІІ КУРСУ
-                                САНІТАРНО-ТЕХНІЧНОГО ФАКУЛЬТЕТУ
-                            </div>
-                            <div class="student-text">“ Цінності й унікальні
-                                взаємини між викладачами і студентами
-                                факультету стали
-                                для мене надійною підвалиною для подальшого
-                                професійного й особистого розвитку.”
-                            </div>
-                        </div>
-                        <div class="inner slide">
-                            <div class="name-student">Павло Бондаренко7</div>
-                            <div class="student-learn">СТУДЕНТ ІІ КУРСУ
-                                САНІТАРНО-ТЕХНІЧНОГО ФАКУЛЬТЕТУ
-                            </div>
-                            <div class="student-text">“ Цінності й унікальні
-                                взаємини між викладачами і студентами
-                                факультету стали
-                                для мене надійною підвалиною для подальшого
-                                професійного й особистого розвитку.”
-                            </div>
-                        </div>
-                        <div class="inner slide">
-                            <div class="name-student">Павло Бондаренко8</div>
-                            <div class="student-learn">СТУДЕНТ ІІ КУРСУ
-                                САНІТАРНО-ТЕХНІЧНОГО ФАКУЛЬТЕТУ
-                            </div>
-                            <div class="student-text">“ Цінності й унікальні
-                                взаємини між викладачами і студентами
-                                факультету стали
-                                для мене надійною підвалиною для подальшого
-                                професійного й особистого розвитку.”
-                            </div>
-                        </div>
-                        <div class="inner slide">
-                            <div class="name-student">Павло 9</div>
-                            <div class="student-learn">СТУДЕНТ ІІ КУРСУ
-                                САНІТАРНО-ТЕХНІЧНОГО ФАКУЛЬТЕТУ
-                            </div>
-                            <div class="student-text">“ Цінності й унікальні
-                                взаємини між викладачами і студентами
-                                факультету стали
-                                для мене надійною підвалиною для подальшого
-                                професійного й особистого розвитку.”
-                            </div>
-                        </div>
-                        <div class="inner slide">
-                            <div class="name-student">Павло Бондаренко10</div>
-                            <div class="student-learn">СТУДЕНТ ІІ КУРСУ
-                                САНІТАРНО-ТЕХНІЧНОГО ФАКУЛЬТЕТУ
-                            </div>
-                            <div class="student-text">“ Цінності й унікальні
-                                взаємини між викладачами і студентами
-                                факультету стали
-                                для мене надійною підвалиною для подальшого
-                                професійного й особистого розвитку.”
-                            </div>
-                        </div>
-                    </div>
+                    <div class="slider student-info no-nav nav-from"></div>
                     <div class="clear"></div>
                     <div class="custom-place"></div>
-
                 </div>
             </div>
         </div>
@@ -684,73 +372,27 @@
 <!--graduates work in-->
 <section class="section10 work grey-section">
     <div class="section-wrap">
-        <!--  <div class="vertical-lines">
-                 <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
-         </div> -->
         <div class="vertical-wrap">
             <div class="vertical-lines-subtitle when-grey  lines-subtitle">
-                <div class="h2">Компанii</div>
+                <div class="h2">[[*vstup_title_sec10]]</div>
                 <div class="cutter">
-                    <div><span><i>Компанii</i></span></div>
-                    <div><span><i>Компанii</i></span></div>
-                    <div><span><i>Компанii</i></span></div>
-                    <div><span><i>Компанii</i></span></div>
+                    <div><span><i>[[*vstup_title_sec10]]</i></span></div>
+                    <div><span><i>[[*vstup_title_sec10]]</i></span></div>
+                    <div><span><i>[[*vstup_title_sec10]]</i></span></div>
+                    <div><span><i>[[*vstup_title_sec10]]</i></span></div>
                 </div>
             </div>
         </div>
-        <div class="container"><h2 class="work-head">Випускники НУХТ працюють
-                у:</h2></div>
+        <div class="container">
+            <h2 class="work-head">[[*vstup_subtitle_sec10]]</h2>
+        </div>
 
         <div class="work-links">
-            <div class="work-link"><img src="assets/images/work/1+1.png" alt="">
-            </div>
-            <div class="work-link"><img src="assets/images/work/491394-fora.png"
-                                        alt=""></div>
-            <div class="work-link"><img src="assets/images/work/cygnet.png"
-                                        alt=""></div>
-            <div class="work-link"><img src="assets/images/work/Danon.png"
-                                        alt=""></div>
-            <div class="work-link"><img src="assets/images/work/fokstrot.png"
-                                        alt=""></div>
-            <div class="work-link"><img src="assets/images/work/G_kurch.png"
-                                        alt=""></div>
-            <div class="work-link"><img src="assets/images/work/Kernel.png"
-                                        alt=""></div>
-            <div class="work-link"><img
-                        src="assets/images/work/koblevo-logo.png" alt=""></div>
-            <div class="work-link"><img src="assets/images/work/Mafia.png"
-                                        alt=""></div>
-            <div class="work-link"><img src="assets/images/work/MAU.png" alt="">
-            </div>
-            <div class="work-link"><img src="assets/images/work/Metro.png"
-                                        alt=""></div>
-            <div class="work-link"><img src="assets/images/work/Nestle.png"
-                                        alt=""></div>
-            <div class="work-link"><img src="assets/images/work/Obolon.png"
-                                        alt=""></div>
-            <div class="work-link"><img src="assets/images/work/oschadbank.png"
-                                        alt=""></div>
-            <div class="work-link"><img src="assets/images/work/PepsiCo.png"
-                                        alt=""></div>
-            <div class="work-link"><img src="assets/images/work/premier.png"
-                                        alt=""></div>
-            <div class="work-link"><img src="assets/images/work/Privat_Bank.png"
-                                        alt=""></div>
-            <div class="work-link"><img src="assets/images/work/Roshen.png"
-                                        alt=""></div>
-            <div class="work-link"><img src="assets/images/work/salateira.png"
-                                        alt=""></div>
-            <div class="work-link"><img src="assets/images/work/Samsung.png"
-                                        alt=""></div>
-            <div class="work-link"><img
-                        src="assets/images/work/Sirne-korolivstvo.png" alt="">
-            </div>
-            <div class="work-link"><img src="assets/images/work/tbfruit.png"
-                                        alt=""></div>
-            <div class="work-link"><img src="assets/images/work/tui.png" alt="">
-            </div>
-            <div class="work-link"><img src="assets/images/work/VK.png" alt="">
-            </div>
+            [[!getImageList?
+            &docid=`[[++site_start]]`
+            &tvname=`migx-graduates-works`
+            &tpl=`work-graduates-item`
+            ]]
         </div>
     </div>
 </section><!--section10-->
@@ -765,83 +407,37 @@
         <div class="sec-head">
             <div class="vertical-wrap">
                 <div class="vertical-lines-subtitle when-grey lines-subtitle">
-                    <div class="h2">ВАЖЛИВО</div>
+                    <div class="h2">[[*vstup_title_sec11]]</div>
                     <div class="cutter">
-                        <div><span><i>ВАЖЛИВО</i></span></div>
-                        <div><span><i>ВАЖЛИВО</i></span></div>
-                        <div><span><i>ВАЖЛИВО</i></span></div>
-                        <div><span><i>ВАЖЛИВО</i></span></div>
+                        <div><span><i>[[*vstup_title_sec11]]</i></span></div>
+                        <div><span><i>[[*vstup_title_sec11]]</i></span></div>
+                        <div><span><i>[[*vstup_title_sec11]]</i></span></div>
+                        <div><span><i>[[*vstup_title_sec11]]</i></span></div>
                     </div>
                 </div>
             </div>
             <div class="container">
-                <h2>Важлива інформація</h2>
+                <h2>[[*vstup_subtitle_sec11]]</h2>
             </div>
         </div>
         <div class="container">
             <div class="article-wrap">
-                <article>
-                    <h4><a href="">Запрошуємо до участі у English Speaking
-                            Club</a>
-                        <time datetime="2017-05-30T19:00">30.05.2017</time>
-                    </h4>
-                    <p>З 22.03.2017 у рамках програми по удосконаленню
-                        комунікативних і мовленнєвих навичок з
-                        англійської мови.Кафедра ділової іноземної мови та
-                        міжнародної комунікації продовжує
-                        проводити “English Speaking Clube” кожну середу ( по
-                        парному тижню) 3 пара (11:20-12:40)
-                        аудиторія 309</p>
-                    <a href="" class="read-more">ЧИТАТИ ДАЛІ <i
-                                class="icon-arrow-right slider-next slick-arrow"
-                                style="display: inline;"></i></a></article>
-                <article>
-                    <h4><a href="">Запрошуємо до участі у English Speaking
-                            Club</a>
-                        <time datetime="2017-05-30T19:00">30.05.2017</time>
-                    </h4>
-                    <p>З 22.03.2017 у рамках програми по удосконаленню
-                        комунікативних і мовленнєвих навичок з
-                        англійської мови.Кафедра ділової іноземної мови та
-                        міжнародної комунікації продовжує
-                        проводити “English Speaking Clube” кожну середу ( по
-                        парному тижню) 3 пара (11:20-12:40)
-                        аудиторія 309</p>
-                    <a href="" class="read-more">ЧИТАТИ ДАЛІ <i
-                                class="icon-arrow-right slider-next slick-arrow"
-                                style="display: inline;"></i></a></article>
-                <article>
-                    <h4><a href="">Запрошуємо до участі у English Speaking
-                            Club</a>
-                        <time datetime="2017-05-30T19:00">30.05.2017</time>
-                    </h4>
-                    <p>З 22.03.2017 у рамках програми по удосконаленню
-                        комунікативних і мовленнєвих навичок з
-                        англійської мови.Кафедра ділової іноземної мови та
-                        міжнародної комунікації продовжує
-                        проводити “English Speaking Clube” кожну середу ( по
-                        парному тижню) 3 пара (11:20-12:40)
-                        аудиторія 309</p>
-                    <a href="" class="read-more">ЧИТАТИ ДАЛІ <i
-                                class="icon-arrow-right slider-next slick-arrow"
-                                style="display: inline;"></i></a></article>
-                <article>
-                    <h4><a href="">Запрошуємо до участі у English Speaking
-                            Club</a>
-                        <time datetime="2017-05-30T19:00">30.05.2017</time>
-                    </h4>
-                    <p>З 22.03.2017 у рамках програми по удосконаленню
-                        комунікативних і мовленнєвих навичок з
-                        англійської мови.Кафедра ділової іноземної мови та
-                        міжнародної комунікації продовжує
-                        проводити “English Speaking Clube” кожну середу ( по
-                        парному тижню) 3 пара (11:20-12:40)
-                        аудиторія 309</p>
-                    <a href="" class="read-more">ЧИТАТИ ДАЛІ <i
-                                class="icon-arrow-right slider-next slick-arrow"
-                                style="display: inline;"></i></a></article>
+                [[pdoResources?
+                &parents=`65`
+                &includeContent=`1`
+                &includeTVs=`event_date`
+                &tvPrefix=``
+                &sortby=`event_date`
+                &sortdir=`DESC`
+                &showLog=`0`
+                &showHidden=`1`
+                &context=`[[*context_key]]`
+                &limit=`4`
+                &tpl=`vstup-vaghno-article-item`
+                ]]
             </div>
-            <a href="" class="button" tabindex="0">ВСІ ОГОЛОШЕННЯ</a>
+            <a href="[[~[[%65:bid]]]]" class="button" tabindex="0">ВСІ
+                ОГОЛОШЕННЯ</a>
         </div>
     </div>
 </section><!--section11-->

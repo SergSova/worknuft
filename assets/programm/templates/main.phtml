@@ -138,12 +138,12 @@
         </div>
         <div class="vertical-wrap">
             <div class="vertical-lines-subtitle lines-subtitle">
-                <div class="h2">[[#[[%11:bid]].pagetitle]]</div>
+                <div class="h2">[[#[[%40:bid]].pagetitle]]</div>
                 <div class="cutter">
-                    <div><span><i>[[#[[%11:bid]].pagetitle]]</i></span></div>
-                    <div><span><i>[[#[[%11:bid]].pagetitle]]</i></span></div>
-                    <div><span><i>[[#[[%11:bid]].pagetitle]]</i></span></div>
-                    <div><span><i>[[#[[%11:bid]].pagetitle]]</i></span></div>
+                    <div><span><i>[[#[[%40:bid]].pagetitle]]</i></span></div>
+                    <div><span><i>[[#[[%40:bid]].pagetitle]]</i></span></div>
+                    <div><span><i>[[#[[%40:bid]].pagetitle]]</i></span></div>
+                    <div><span><i>[[#[[%40:bid]].pagetitle]]</i></span></div>
                 </div>
             </div>
         </div>
@@ -152,9 +152,10 @@
                 <h2>[[*title_6_gallery]]</h2>
                 <nav class="fall-down">
                     <span>КАТЕГОРІЯ</span>
+                    <div class="triangle-down-nav"></div>
                     <ul>
                         [[!pdoResources?
-                        &parents=`[[%11:bid]]`
+                        &parents=`[[%40:bid]]`
                         &depth=`0`
                         &sortby=`{"menuindex":"ASC"}`
                         &tpl=`@INLINE
@@ -171,7 +172,7 @@
             <div class="photo-gallery">
                 <div class="slider customPagin chocolate-slider">
                     [[!pdoResources?
-                    &parents=`[[%11:bid]]`
+                    &parents=`[[%40:bid]]`
                     [[#get.photo_cat:!empty=`&resources=`[[#get.photo_cat]]``]]
                     &sortby=`{"publishedon":"DESC"}`
                     &limit=`0`
@@ -258,20 +259,21 @@
         <div class="container">
             <div class="sec-head">
                 <div class="horizontal-lines-subtitle lines-subtitle">
-                    <div class="h2">[[#[[%21:bid]].pagetitle]]</div>
+                    <div class="h2">[[#[[%73:bid]].pagetitle]]</div>
                     <div class="cutter">
-                        <div><span><i>[[#[[%21:bid]].pagetitle]]</i></span>
+                        <div><span><i>[[#[[%73:bid]].pagetitle]]</i></span>
                         </div>
-                        <div><span><i>[[#[[%21:bid]].pagetitle]]</i></span>
+                        <div><span><i>[[#[[%73:bid]].pagetitle]]</i></span>
                         </div>
                     </div>
                 </div>
                 <h2>[[*videogallery-title]]</h2>
                 <nav class="fall-down">
                     <span>КАТЕГОРІЯ</span>
+                    <div class="triangle-down-nav"></div>
                     <ul>
                         [[!pdoResources?
-                        &parents=`[[%21:bid]]`
+                        &parents=`[[%73:bid]]`
                         &depth=`0`
                         &sortby=`{"menuindex":"ASC"}`
                         &tpl=`@INLINE
@@ -288,7 +290,7 @@
             <div class="video-gallery">
                 <div class="slider customPagin chocolate-slider">
                     [[pdoResources?
-                    &parents=`[[#get.video_cat:default=`[[%21:bid]]`]]`
+                    &parents=`[[#get.video_cat:default=`[[%73:bid]]`]]`
                     &sortby=`{"publishedon":"DESC"}`
                     &limit=`0`
                     &includeTVs=`poster-video,video-link`
